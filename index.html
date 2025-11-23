@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Migration Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+    <h1>Store Migration</h1>
+    <div class="card">
+      <div class="row">
+        <label for="entity">Select entity:</label>
+        <select id="entity">
+          <option value="products">Products</option>
+          <option value="customers">Customers</option>
+          <option value="orders">Orders</option>
+        </select>
+        <label for="fileInput">Upload CSV / JSON:</label>
+        <input type="file" id="fileInput" accept=".csv,.json" />
+
+        <button id="loadSample" class="secondary">Download Sample CSV</button>
+      </div>
+       <div class="controls">
+        <button id="migrateBtn">Run Migration</button>
+        <button id="seoBtn">Run SEO Check</button>
+        <button id="downloadBtn">Download Migrated JSON</button>
+        <button id="previewBtn" class="secondary">Preview Raw Input</button>
+        <span class="muted" id="status">No file loaded</span>
+      </div>
+    </div>  
+    <div class="card">
+      <h3>Migration Output</h3>
+      <pre id="output">Nothing yet — run migration to see results.</pre>
+    </div>
+
+    <div class="card">
+      <h3>SEO Check</h3>
+      <div id="seoArea" class="muted">Run SEO check to see results here.</div>
+    </div>
+
+    <div class="card">
+      <h3>Preview Parsed Table</h3>
+      <div id="tableArea"></div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
